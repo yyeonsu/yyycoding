@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	
+	<link rel="stylesheet" href="./css/jquery.bxslider.css">
+	
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.slider1').bxSlider({
+				auto:true
+				
+			});
+			$('.slider2').bxSlider({
+				controls:false,
+				auto:true
+			});
+		});
+
+	</script>
+	<link rel="stylesheet" href="../reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script>
+		function bgclick(){
+			document.getElementsByTagName('body')[0].style.background="url(../images/w01.jpg) no-repeat";
+		};
+			function bgclick1(){
+			document.getElementsByTagName('body')[0].style.background="";
+		};
+	</script>
+
+	<title>문서 제목</title>
+</head>
+<body>
+	<div id="button" style="width: 200px; height: 200px; position: absolute;">
+		<div class="btn blue" style="width:100px;" onclick="bgclick()">배경변경1</div>
+		<div class="btn blue" style="width:100px;" onclick="bgclick1()">배경변경2</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="slider1">
+					<div class="imgview">
+						<img src="../images/pc01.png" alt="">
+					</div class="imgview">
+						<div>
+						<img src="../images/pc02.png" alt="">
+					</div class="imgview">
+					<div>
+						<img src="../images/pc03.png" alt="">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row bg-skyblue">
+			<div class="span_6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusamus eum, nihil voluptatum totam eveniet aspernatur magnam voluptate consequatur ratione consequuntur obcaecati facilis eaque ex, vero optio adipisci voluptas, magni molestias delectus quam veniam rem assumenda excepturi. Est repellendus, debitis, fuga eum molestias mollitia laboriosam excepturi deleniti corporis nulla, dolore.</div>
+			<div class="span_6" id="slider2_wrap">
+				<div class="slider2">
+					<div class="imgview">
+						<img src="../images/pc01.png" alt="">
+					</div class="imgview">
+						<div>
+						<img src="../images/pc02.png" alt="">
+					</div class="imgview">
+					<div>
+						<img src="../images/pc03.png" alt="">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row bg-gray">
+			<div class="span_4">
+				<div class="card">
+					<img src="../images/testimg.jpg" alt="카드이미지" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="caed-text">대표</p>
+						<div class="btn blue"><a href="tel:01012345678">01012345678</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_4">
+				<div class="card">
+					<img src="../images/testimg.jpg" alt="카드이미지" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="caed-text">대표</p>
+						<div class="btn blue"><a href="tel:01012345678">01012345678</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_4">
+				<div class="card">
+					<img src="../images/testimg.jpg" alt="카드이미지" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="caed-text">대표</p>
+						<div class="btn blue"><a href="tel:01012345678">01012345678</a></div>
+					</div>
+				</div></div>
+		</div>
+		<div class="row">
+			<div class="span_3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas consectetur, voluptates similique. Molestias ab qui illum, voluptatum reiciendis, ad minus quam hic animi eius odio unde dolor fugit amet harum ut odit quas repudiandae sed? Error aperiam soluta corporis, ipsum ducimus esse tempore repudiandae, dicta quasi maxime? Ea, tempora maxime.</div>
+			<div class="span_3">Quas provident enim maxime similique pariatur iure quibusdam ullam qui optio esse incidunt, facere facilis, ad quis, quod vitae. Voluptatibus sed temporibus, voluptatem? Unde iusto tempore dolores perferendis possimus delectus, fugiat reprehenderit maxime eius vel, optio id quibusdam, ipsum provident sequi voluptatem nisi laudantium reiciendis, porro consectetur iure placeat at!</div>
+			<div class="span_3">Impedit nobis nam quasi ducimus nesciunt voluptatem animi eaque sunt quibusdam, odio ipsam ullam quo sit, beatae mollitia similique illum possimus alias eligendi iure voluptatum incidunt voluptate delectus commodi, libero! Expedita doloribus pariatur veritatis vel at, quae sit, non, sunt dolorem incidunt autem omnis? Ea ad adipisci aliquid eius labore?</div>
+			<div class="span_3">Fugit nisi ipsam ullam accusantium enim mollitia itaque quae nihil consequatur consectetur laborum ab, vero voluptatibus, alias quaerat quibusdam dicta? At cupiditate rerum rem distinctio provident minus exercitationem dignissimos accusantium? Recusandae obcaecati quisquam atque quo quibusdam aut dolor nostrum soluta, impedit! Aliquid eius, ipsa perferendis illum officia quos, unde delectus.</div>
+			<div class="span_3">Fugit quidem, id aut aspernatur excepturi accusamus placeat, laudantium unde debitis voluptatibus. Magni, id inventore expedita, esse consequuntur earum distinctio cumque recusandae tempora temporibus voluptate! Praesentium at dolore, incidunt temporibus, porro nesciunt harum. Accusamus nobis rem nesciunt, porro, excepturi explicabo dolorum corporis sit esse modi et, possimus voluptatum! Pariatur, dignissimos.</div>
+		</div>
+		<div class="row bg-pink">
+			<div class="span_2">
+				<div class="card">
+					<img src="../images/testimg.jpg" alt="카드이미지" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="caed-text">대표</p>
+						<div class="btn pink"><a href="tel:01012345678">01012345678</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_2">
+				<div class="card">
+					<img src="../images/testimg.jpg" alt="카드이미지" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="caed-text">대표</p>
+						<div class="btn pink"><a href="tel:01012345678">01012345678</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_2">
+				<div class="card">
+					<img src="../images/testimg.jpg" alt="카드이미지" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="caed-text">대표</p>
+						<div class="btn pink"><a href="tel:01012345678">01012345678</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_2">
+				<div class="card">
+					<img src="../images/testimg.jpg" alt="카드이미지" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="caed-text">대표</p>
+						<div class="btn pink"><a href="tel:01012345678">01012345678</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_2">
+				<div class="card">
+					<img src="../images/testimg.jpg" alt="카드이미지" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="caed-text">대표</p>
+						<div class="btn pink"><a href="tel:01012345678">01012345678</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_2">
+				<div class="card">
+					<img src="../images/testimg.jpg" alt="카드이미지" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="caed-text">대표</p>
+						<div class="btn pink"><a href="tel:01012345678">01012345678</a></div>
+					</div>
+				</div>
+	</div>
+</body>
+</html>
