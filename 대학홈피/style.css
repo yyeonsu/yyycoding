@@ -1,7 +1,7 @@
 @charset "utf-8";
-*{box-sizing: border-box;}
+*{box-sizing: border-box; }
 
-#header_wrapper{width: 100%; background: #eee; height: 160px;}
+#header_wrapper{width: 100%;  height: 160px;}
 #top_wrapper{width: 100%; height: 40px; background: #0044af;}
 #top_wrap{width: 1200px; height: 40px; margin: 0 auto;}
 
@@ -16,26 +16,51 @@
 }
 #top_menu>ul>li:hover{background: #fff; color: #6b6b6b;}
 
-#top_gnb{}
+#top_gnb{position: relative;}
 #top_gnb:after{content: "";display: block;clear: both;}
-#top_gnb>ul{float: right; width: 300px;}
+#top_gnb>ul{position: absolute; right: 0; top: 10px; width: 300px;}
 #top_gnb>ul>li{
 	float: left; color: #fff; font-size: 12px;
-	text-align: center; line-height: 40px; padding-left: 5px;
+	text-align: center; line-height: 16px; padding-left: 5px;
 	}
 #top_gnb>ul>li:hover{font-weight: bold}
 /*--*/
 
-
+/*헤더로고영역*/
 #logo_wrap{width: 1200px; height: 120px; margin: 0 auto;}
 #logo:after{content: "";display: block;clear: both;}
 #logo{position: relative;}
-#logo>h1{position: absolute; top: 45px; left: 0; }
+#logo>h2{position: absolute; top: 45px; left: 0; }
 
-#lnb{}
+#lnb{position: relative;}
 #lnb>ul:after{content: "";display: block;clear: both;}
-#lnb>ul{float: right; }
+#lnb>ul{/*float: right;*/ position: absolute; right: 0; top: 35px;}
 #lnb>ul>li{
 	float: left; font-size: 20px; color: #464646; text-align: center;
-	padding: 0 20px; line-height: 120px;
+	padding: 0 0 0 30px; line-height: 45px;
 }
+/*#lnb>ul>li>img{line-height: 120px;}*/
+/*--*/
+
+/*중앙컨테이너*/
+#container_wrapper{width: 100%;
+ background: url(./images/bg_img2.jpg) no-repeat center;}
+#container_wrap{width: 1200px; margin: 0 auto; 
+	background: #ddd;height: 1300px; position: relative; 
+	}
+
+/*상단텍스트&아이콘	*/
+#top_container{position: absolute;top: 70px; width: 1200px;height: 140px;}
+#top_container>#text{
+	position: absolute; left: 0px;bottom: 0;  font-size:40px;
+	color: #fff; 
+}
+#top_container>#icon{}
+#top_container>#text>h1{font-size: 59px;}
+#top_container>#icon ul{position: absolute; right: 0; bottom: 0;}
+#top_container>#icon li{ 
+	float: left; padding-left: 40px; text-align: center;
+	color: #fff; font-weight: bold; font-size: 16px;
+}
+#top_container>#icon img{width: 84px; margin-bottom: 5px;}
+/*--*/
