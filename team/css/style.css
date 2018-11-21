@@ -1,0 +1,447 @@
+@charset "UTF-8";
+body{font-family: 'Noto Sans KR', sans-serif;}
+
+header#amazon_header{position:relative; width:100%; min-width:900px; height:55vh; background-color:#F1FFCD; overflow:hidden;}
+
+/*--------------------------------------
+----------------gnb start--------------- 헤더 글로벌 내비게이션
+--------------------------------------*/
+	#gnb{position:relative; top:120px; width:900px; height:60px; border-radius:30px; margin:0 auto; background:#fff; box-shadow:3px 3px 10px -1px rgba(0,0,0,0.3); z-index:200;}
+	#gnb>ul{width:100%;}
+	#gnb>ul:after{content:""; display:block; clear:both;}
+	#gnb>ul>li{float:left;}
+	#gnb>ul>li>a{display:block; width:250px; line-height:60px; font-size:18px; font-weight:bold; text-align:center; letter-spacing:2px; color:#eee; transition:0.5s;}
+	#gnb>ul>li:first-child>a{width:200px;}
+	#gnb>ul>li:last-child>a{width:200px;}
+	#gnb>ul>li.active>a{color:#333;}
+		#navigator{position:absolute; top:0; left:0; width:200px; height:60px; border-radius:30px; border:9px solid #7f950e; box-sizing:border-box;}
+/*--------------------------------------
+---------------FAG start---------------- fixed FAQ버튼 디자인
+--------------------------------------*/
+#faq_btn{position:fixed; width:100px; height:100px; animation:faqhover 1.6s infinite; left:100px; bottom:100px; border-radius:50px; background:#ba3131; transition:0.5s; cursor:pointer; transform-origin:50% 50%; transform:scale(0,0); z-index:99999;}
+	@keyframes faqhover{
+		0%{box-shadow:0 0 0 1px rgba(255,255,255,0.4);}
+		50%{box-shadow:0 0 0 8px rgba(255,255,255,0.4);}
+		100%{box-shadow:0 0 0 1px rgba(255,255,255,0.4);}
+	}
+#faq_btn:hover{animation-play-state:paused;}
+#faq_btn>h2{width:100px; text-align:center; line-height:100px; color:#fff; letter-spacing:2px;}
+
+/*--------------------------------------
+--------------stem start---------------- 헤더 상단 덩쿨들
+--------------------------------------*/
+	.stem{position:absolute; width:100%; top:0; z-index:300}
+	.stem>img{position:absolute; top:-50px;}
+	.stem>img:nth-of-type(1){width:28%; top:-250px;}
+	.stem>img:nth-of-type(2){width:38%; top:-220px;}
+	.stem>img:nth-of-type(3){width:18%; right:10%; top:-250px;}
+	.stem>img:nth-of-type(4){width:28%; right:0; top:-200px;}
+	.stem>img:nth-of-type(5){width:1.8%; left:5%; top:-290px;}
+	.stem>img:nth-of-type(6){width:1.5%; right:38%; z-index:200; top:-180px;}
+
+/*--------------------------------------
+--------------leafL start---------------- 헤더 왼쪽 잎사귀들
+--------------------------------------*/
+	.leafL{position:absolute; width:100%; top:0; z-index:100}
+	.leafL>img{position:absolute; top:-30px; left:-20px; transform-origin:0 0;}
+	.leafL>img:nth-of-type(1){width:19%; left:-2%; animation:leafL01 5s infinite;}
+		@keyframes leafL01{
+			0% {transform: rotate(-10deg)}
+			50% {transform: rotate(0deg)}
+			100% {transform: rotate(-10deg)}
+		}
+	.leafL>img:nth-of-type(2){width:11%; top:2vh; left:-4%; animation:leafL02 4.8s infinite;}
+		@keyframes leafL02{
+			0% {transform: rotate(-12deg)}
+			50% {transform: rotate(5deg)}
+			100% {transform: rotate(-12deg)}
+		}
+	.leafL>img:nth-of-type(3){width:13%; top:30vh; left:-2%; animation:leafL03 6s infinite; transform-origin:0 100%;}
+		@keyframes leafL03{
+			0% {transform: rotate(5deg)}
+			50% {transform: rotate(10deg)}
+			100% {transform: rotate(5deg)}
+		}
+	.leafL>img:nth-of-type(4){width:14%; top:38vh; left:-2%; animation:leafL04 6s infinite; transform-origin:0 100%;}
+		@keyframes leafL04{
+			0% {transform: rotate(0deg)}
+			50% {transform: rotate(10deg)}
+			100% {transform: rotate(0deg)}
+		}
+/*--------------------------------------
+--------------leafR start--------------- 헤더 오른쪽 잎사귀들
+--------------------------------------*/
+	.leafR{position:absolute; width:100%; top:0; right:0; z-index:100}
+	.leafR>img{position:absolute; top:-30px; right:-20px; transform-origin:100% 0;}
+	.leafR>img:nth-of-type(1){width:24%; right:-4%; animation:leafR01 5s infinite;}
+		@keyframes leafR01{
+			0% {transform: rotate(-15deg)}
+			50% {transform: rotate(-5deg)}
+			100% {transform: rotate(-15deg)}
+		}
+	.leafR>img:nth-of-type(2){width:14%; top:1vh; right:-4%; animation:leafR02 4.8s infinite;}
+		@keyframes leafR02{
+			0% {transform: rotate(-12deg)}
+			50% {transform: rotate(5deg)}
+			100% {transform: rotate(-12deg)}
+		}
+	.leafR>img:nth-of-type(3){width:15%; top:32vh; right:0%; animation:leafR03 4s infinite; transform-origin:100% 100%;}
+		@keyframes leafR03{
+			0% {transform: rotate(5deg)}
+			50% {transform: rotate(8deg)}
+			100% {transform: rotate(5deg)}
+		}
+/*--------------------------------------
+--------------bush start--------------- 헤더 가운데 덤불들
+--------------------------------------*/
+	.bush{position:absolute; width:100%; height:55vh; top:0; right:0;}
+	.bush>img{position:absolute; width:65%; bottom:-300px;}
+	.bush>img:nth-of-type(1){}
+	.bush>img:nth-of-type(2){width:60%; right:0;}
+	.bush>img:nth-of-type(3){width:55%; left:10%;}
+
+/*--------------------------------------
+--------------wave start---------------- 헤더 파도 움직임
+--------------------------------------*/
+	.wave{position:absolute; bottom:0; width:100%; height:100px; overflow:hidden; z-index:100;}
+	.wave>img{position:absolute; bottom:0; width:120%; animation-iteration-count:infinite; animation-duration:15s; animation-timing-function:linear;}
+	.wave>img:nth-child(1){left:-20%; animation-name:wave01;}
+	.wave>img:nth-child(2){left:0%; animation-name:wave02;}
+		@keyframes wave01{
+			0%{left:-20%}
+			50%{left:0%}
+			100%{left:-20%}
+		}
+		@keyframes wave02{
+			0%{left:0%}
+			50%{left:-20%}
+			100%{left:0%}
+		}
+
+/*--------------------------------------
+----------------section start-----------
+--------------------------------------*/
+section#amazon_section{position:relative; width:100%; height:2000px; background-color:#897c67;}
+	/*--- 물고기 설명 문안 css ---*/
+	.info_basic{padding:15px 20px;}
+	.info_basic>p:nth-of-type(1){font-size:20px; font-weight:bold;}
+	.info_basic>p:nth-of-type(2){font-size:14px; font-weight:bold; margin-top:3px;}
+	.info_basic>p:nth-of-type(3){font-size:13px; margin-top:8px;}
+	/*--- 물고기 설명 문안 css ---*/
+
+	/*--- css 규칙 물고기 접두어 ama,tro,oce---*/
+
+	.ama_fish01_wrap{position:absolute; left:10%; top:330px;}
+	.ama_fish01:hover{animation-play-state:paused;}
+	.ama_fish01:hover+div{opacity:1; animation-play-state:paused;}
+	.ama_fish01{position:absolute; width:250px; top:300px left:10px; 
+		cursor:pointer; animation:ama_fish01 10s infinite;}
+		@keyframes ama_fish01{
+			0% {left:10px;}
+			49% {transform:rotateY(0deg);}
+			50% {left:400px; transform:rotateY(180deg);}
+			99% {transform:rotateY(180deg)}
+			100% {left:10px; transform:rotateY(0deg)}
+		}
+	.ama_fish01>img{width:100%;}
+	.ama_info01{opacity:0; position:absolute; width:300px; top:-220px; 
+		background:#fff; border-radius:15px;  animation:ama_info01 10s infinite; 
+		transition:0.3s;}
+		@keyframes ama_info01{
+			0% {left:10px;}
+			50% {left:400px;}
+			100% {left:10px;}
+		}
+	/*네온테트라*/
+	.ama_fish02_wrap{position: absolute; left: 10%; top: 60px;}
+	.ama_fish02:hover{animation-play-state: paused;}
+	.ama_fish02:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish02{position: absolute; width: 180px; top: 0px; left: 0;
+		cursor: pointer; animation:ama_fish02 7s infinite; animation-delay: 1s;}
+		@keyframes ama_fish02{
+			0% {left:0px;}
+			49% {transform:rotateY(0deg);}
+			50% {left:300px; transform:rotateY(180deg);}
+			99% {transform:rotateY(180deg)}
+			100% {left:0px; transform:rotateY(0deg)}
+		}
+
+	.ama_fish02>img{width: 100%; position: absolute;}
+	.ama_info02{opacity:0; position:absolute; width:300px; top:50px; 
+		background:#fff; border-radius:15px;  animation:ama_info02 7s infinite; 
+		transition:0.3s; animation-delay: 1s;}
+		@keyframes ama_info02{
+			0% {left:0px;}
+			50% {left:300px;}
+			100% {left:0px;}
+		}
+	/*레몬테트라*/
+	.ama_fish03_wrap{position: absolute; right: 10%; top: 110px;}
+	.ama_fish03:hover{animation-play-state: paused;}
+	.ama_fish03_1:hover{animation-play-state: paused;}
+	.ama_fish03:hover+div+div.ama_info03{opacity: 1; animation-play-state: paused;}
+	.ama_fish03_1:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish03{position: absolute; width: 100px; top: 0px; right: 0;
+		cursor: pointer; animation:ama_fish03 13s infinite; 
+		animation-delay: 1s; opacity: 0.5;}
+		@keyframes ama_fish03{
+			0% {right:0px;}
+			49% {transform:rotateY(0deg);}
+			50% {right:200px; transform:rotateY(180deg);}
+			99% {transform:rotateY(180deg)}
+			100% {right:0px; transform:rotateY(0deg)}
+		}
+	.ama_fish03_1{position: absolute; width: 100px; top: 0px; right: 200px;
+		cursor: pointer; animation:ama_fish03_1 13s infinite;}
+		@keyframes ama_fish03_1{
+			0% {right:200px;}
+			49% {transform:rotateY(0deg);}
+			50% {right:0px; transform:rotateY(180deg);}
+			99% {transform:rotateY(180deg)}
+			100% {right:200px; transform:rotateY(0deg)}
+		}
+
+	.ama_fish03>img{width: 100%; position: absolute;}
+	.ama_fish03_1>img{width: 100%; position: absolute;}
+	.ama_info03{opacity:0; position:absolute; width:300px; top:70px; 
+		background:#fff; border-radius:15px;  animation:ama_info03 13s infinite; 
+		transition:0.3s; animation-delay: 1s;}
+		@keyframes ama_info03{
+			0% {right:-40px;}
+			50% {right:30px;}
+			100% {right:-40px;}
+		}
+	/*시클라소마세베룸*/
+	.ama_fish04_wrap{position: absolute; right: 5%; top: 440px;}
+	.ama_fish04:hover{animation-play-state: paused;}
+	.ama_fish04:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish04{position: absolute; width: 180px; top: 0px; right: 0;
+		cursor: pointer; animation:ama_fish04 12s infinite; }
+		@keyframes ama_fish04{
+			0% {right:0px;}
+			49% {transform:rotateY(0deg);}
+			50% {right:300px; transform:rotateY(180deg);}
+			99% {transform:rotateY(180deg)}
+			100% {right:0px; transform:rotateY(0deg)}
+		}
+
+	.ama_fish04>img{width: 70%; position: absolute;}
+	.ama_info04{opacity:0; position:absolute; width:300px; top:-250px; 
+		background:#fff; border-radius:15px;  animation:ama_info04 12s infinite; 
+		transition:0.3s; }
+		@keyframes ama_info04{
+			0% {right:0px;}
+			50% {right:300px;}
+			100% {right:0px;}
+		}
+	/*파쿠*/
+	.ama_fish05_wrap{position: absolute; left: 5%; top: 590px;}
+	.ama_fish05:hover{animation-play-state: paused;}
+	.ama_fish05:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish05{position: absolute; width: 180px; top: 0px; left: 0;
+		cursor: pointer; animation:ama_fish05 12s infinite; }
+		@keyframes ama_fish05{
+			0% {left:0px; top: 0;}
+			49% {transform:rotateY(0deg) rotateZ(0deg);}
+			50% {left:300px; top: 70px; transform:rotateY(180deg) rotateZ(-60deg);}
+			99% {transform:rotateY(180deg);}
+			100% {left:0px;top: 30px; transform:rotateY(0deg) rotateZ(0deg);}
+		}
+
+	.ama_fish05>img{width: 80%; position: absolute;}
+	.ama_fish05>img:nth-of-type(2){width: 60%; position: absolute; top: 40px; left: -40px;
+		transform: rotateZ(25deg);}
+	.ama_info05{opacity:0; position:absolute; width:300px; top:-210px; 
+		background:#fff; border-radius:15px;  animation:ama_info05 12s infinite; 
+		transition:0.3s; }
+		@keyframes ama_info05{
+			0% {left:0px;}
+			50% {left:300px;}
+			100% {left:0px;}
+		}
+	/*피라루크*/
+	.ama_fish06_wrap{position: absolute; left: 40%; top: 590px;}
+	.ama_fish06:hover{animation-play-state: paused;}
+	.ama_fish06:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish06{position: absolute; width: 180px; top: 0px; left: 0;
+		cursor: pointer; animation:ama_fish06 20s infinite; }
+		@keyframes ama_fish06{
+			0% {left:350px; top: 0;}
+			49% {transform:rotateY(0deg) ;}
+			50% {left:80px; transform:rotateY(180deg) ;}
+			99% {transform:rotateY(180deg);}
+			100% {left:350px;top: 30px; transform:rotateY(0deg) ;}
+		}
+
+	.ama_fish06>img{width: 100%; position: absolute;}
+	.ama_fish06>img:nth-of-type(2){width: 80%; position: absolute; top: 40px; left: -40px;
+		transform: rotateZ(7deg);}
+	.ama_info06{opacity:0; position:absolute; width:300px; top:150px; 
+		background:#fff; border-radius:15px;  animation:ama_info06 20s infinite; 
+		transition:0.6s; }
+		@keyframes ama_info06{
+			0% {left:350px;}
+			50% {left:80px;}
+			100% {left:350px;}
+		}
+	/*피라냐*/
+	.ama_fish07_wrap{position: absolute; left: 30%; top: 1100px;}
+	.ama_fish07:hover{animation-play-state: paused;}
+	.ama_fish07:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish07{position: absolute; width: 180px; top: 0px; left: 0;
+		cursor: pointer; animation:ama_fish07 7s infinite; 
+		opacity: 0.5;}
+		@keyframes ama_fish07{
+			0% {left:30px; top: 0;}
+			49% {transform:rotateY(0deg) ;}
+			50% {left:320px; transform:rotateY(180deg); top: 30px;}
+			99% {transform:rotateY(180deg);}
+			100% {left:30px;top: 0; transform:rotateY(0deg) ;}
+		}
+
+	.ama_fish07>img{width: 100%; position: absolute;}
+	.ama_fish07>img:nth-of-type(2){width: 100%; position: absolute; top: 40px; left: -30px;
+		}
+	.ama_info07{opacity:0; position:absolute; width:300px; top:150px; 
+		background:#fff; border-radius:15px;  animation:ama_info07 7s infinite; 
+		transition:0.3s; }
+		@keyframes ama_info07{
+			0% {left:30px;}
+			50% {left:320px;}
+			100% {left:30px;}
+		}
+	/*타이거쇼벨*/
+	.ama_fish08_wrap{position: absolute; right: 10%; top: 830px;}
+	.ama_fish08:hover{animation-play-state: paused;}
+	.ama_fish08:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish08{position: absolute;width: 350px;top: 0;right: 0; 
+		cursor: pointer; animation:ama_fish08 21s infinite;}
+		@keyframes ama_fish08{
+			0% {right:300px;}
+			49% {transform:rotateY(0deg);}
+			50% {right:0px; transform:rotateY(180deg);}
+			99% {transform:rotateY(180deg)}
+			100% {right:300px; transform:rotateY(0deg)}
+		}
+	.ama_fish08>img{width: 100%; position: absolute;}
+	.ama_info08{opacity: 0; position: absolute; width: 300px; top: 140px;
+		background:#fff;border-radius:15px;animation:ama_info08 21s infinite;
+		transition: 0.3s;}
+		@keyframes ama_info08{
+			0%{right: 300px;}
+			50%{right: 0;}
+			100%{right: 300px;}
+		}
+	/*오스카*/
+	.ama_fish09_wrap{position: absolute; left: 15%; top: 1400px;}
+	.ama_fish09:hover{animation-play-state: paused;}
+	.ama_fish09:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish09{position: absolute;width: 200px;top: 0;right: 0; 
+		cursor: pointer; animation:ama_fish09 7s infinite;}
+		@keyframes ama_fish09{
+			0% {left:300px;}
+			49% {transform:rotateY(0deg);}
+			50% {left:0px; transform:rotateY(180deg);}
+			99% {transform:rotateY(180deg)}
+			100% {left:300px; transform:rotateY(0deg)}
+		}
+	.ama_fish09>img{width: 100%; position: absolute;}
+	.ama_fish09>img:nth-of-type(2){width: 80%; 
+		position: absolute;top: 80px; left: 130px; transform: rotateZ(-20deg);}
+	.ama_info09{opacity: 0; position: absolute; width: 300px; top: -220px;
+		background:#fff;border-radius:15px;animation:ama_info09 7s infinite;
+		transition: 0.3s;}
+		@keyframes ama_info09{
+			0%{left: 300px;}
+			50%{left: 0px;}
+			100%{left: 300px;}
+		}
+	/*뱀장어*/
+	.ama_fish10_wrap{position: absolute; right: 5%; top: 1600px;}
+	.ama_fish10:hover{animation-play-state: paused;}
+	.ama_fish10:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish10{position: absolute; width: 300px; top: 0px; right: 0;
+		cursor: pointer; animation:ama_fish10 20s infinite; }
+		@keyframes ama_fish10{
+			0% {right:0px; top: 0;}
+			49% {transform:rotateY(0deg) ;}
+			50% {right:350px; transform:rotateY(180deg) ;}
+			99% {transform:rotateY(180deg);}
+			100% {right:0px;top: 30px; transform:rotateY(0deg) ;}
+		}
+
+	.ama_fish10>img{width: 100%; position: absolute;}
+	.ama_fish10>img:nth-of-type(1){width: 80%; position: absolute; top: -40px; left: 40px;
+		transform: rotateZ(7deg);}
+	.ama_info10{opacity:0; position:absolute; width:300px; top:120px; 
+		background:#fff; border-radius:15px;  animation:ama_info10 20s infinite; 
+		transition:0.6s; }
+		@keyframes ama_info10{
+			0% {right:0px;}
+			50% {right:350px;}
+			100% {right:0px;}
+		}
+	/*레드테일캣피쉬*/
+	.ama_fish11_wrap{position: absolute; right: 20%; top: 1800px;}
+	.ama_fish11:hover{animation-play-state: paused;}
+	.ama_fish11:hover+div{opacity: 1; animation-play-state: paused;}
+	.ama_fish11{position: absolute; width: 320px; top: 0px; right: 0;
+		cursor: pointer; animation:ama_fish11 22s infinite; }
+		@keyframes ama_fish11{
+			0% {right:0px; top: 0;}
+			49% {transform:rotateY(0deg) ;}
+			50% {right:420px; transform:rotateY(180deg) ;}
+			99% {transform:rotateY(180deg);}
+			100% {right:0px;top: 30px; transform:rotateY(0deg) ;}
+		}
+
+	.ama_fish11>img{width: 100%; position: absolute;}
+	.ama_info11{opacity:0; position:absolute; width:300px; top:-150px; 
+		background:#fff; border-radius:15px;  animation:ama_info11 22s infinite; 
+		transition:0.8s; }
+		@keyframes ama_info11{
+			0% {right:0px;}
+			50% {right:420px;}
+			100% {right:0px;}
+		}
+
+	/*나뭇잎 나뭇가지------------------------------*/
+	.ama_atc_wrap{position: absolute; top: 0;left: 0; width: 100%; height: 2000px; overflow: hidden;}
+	.ama_atc{position: absolute; width: 100%;top: 0;left: 0; height: 2000px;}
+	.ama_atc>img:nth-of-type(1){position:absolute;right:10%; bottom: 5%;
+		animation:ama_atc3 11s infinite; transition: 2s;
+		}
+		@keyframes ama_atc3{
+		0%{transform: rotateZ(0deg);}
+		50%{transform: rotateZ(-10deg);}
+		100%{transform: rotateZ(0deg);}
+	}
+	.ama_atc>img:nth-of-type(2){position:absolute; bottom: 0;
+		}
+	.ama_atc>img:nth-of-type(3){position:absolute;top:0;left:0;width:20%;max-width: 400px;
+		animation:ama_atc1 11s infinite;}
+		@keyframes ama_atc1{
+		0%{top: 0;}
+		50%{top: 40px;}
+		100%{top: 0px;}
+	}
+	.ama_atc>img:nth-of-type(4){position:absolute;top:0;right:10%;width:60%;
+		animation:ama_atc2 13s infinite;}
+		@keyframes ama_atc2{
+		0%{top: 0; right: 0;}
+		50%{top: 40px; right: 20px;}
+		100%{top: 0px;right: 0;}
+	}
+	
+	
+	.ama_footer_wrap{position: absolute; bottom: 0; width: 100%;}
+	.ama_footer1{position: absolute;bottom: 0;width: 100%;}
+	.ama_footer2{position: absolute;bottom: 0;width: 100%;}
+
+	/*------------------------------------------------
+	---------------푸터-----------------------------
+	------------------------------------------------*/
+	footer{width: 100%; height: 200px; background: #5b5349;}
+	
+
+
